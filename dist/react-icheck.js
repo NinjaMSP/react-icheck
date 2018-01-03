@@ -1,13 +1,13 @@
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("react"), require("classnames"));
+		module.exports = factory(require("react"), require("prop-types"), require("classnames"));
 	else if(typeof define === 'function' && define.amd)
-		define(["react", "classnames"], factory);
+		define(["react", "prop-types", "classnames"], factory);
 	else if(typeof exports === 'object')
-		exports["ReactIcheck"] = factory(require("react"), require("classnames"));
+		exports["ReactIcheck"] = factory(require("react"), require("prop-types"), require("classnames"));
 	else
-		root["ReactIcheck"] = factory(root["react"], root["classnames"]);
-})(this, function(__WEBPACK_EXTERNAL_MODULE_38__, __WEBPACK_EXTERNAL_MODULE_42__) {
+		root["ReactIcheck"] = factory(root["react"], root["prop-types"], root["classnames"]);
+})(this, function(__WEBPACK_EXTERNAL_MODULE_38__, __WEBPACK_EXTERNAL_MODULE_42__, __WEBPACK_EXTERNAL_MODULE_43__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -66,11 +66,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _Checkbox2 = _interopRequireDefault(_Checkbox);
 	
-	var _Radio = __webpack_require__(43);
+	var _Radio = __webpack_require__(44);
 	
 	var _Radio2 = _interopRequireDefault(_Radio);
 	
-	var _RadioGroup = __webpack_require__(44);
+	var _RadioGroup = __webpack_require__(45);
 	
 	var _RadioGroup2 = _interopRequireDefault(_RadioGroup);
 	
@@ -729,7 +729,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames2 = __webpack_require__(42);
+	var _propTypes = __webpack_require__(42);
+	
+	var _propTypes2 = _interopRequireDefault(_propTypes);
+	
+	var _classnames2 = __webpack_require__(43);
 	
 	var _classnames3 = _interopRequireDefault(_classnames2);
 	
@@ -742,103 +746,106 @@ return /******/ (function(modules) { // webpackBootstrap
 	  _createClass(EnhancedSwitch, null, [{
 	    key: 'propTypes',
 	    value: {
-	      inputType: _react2['default'].PropTypes.string.isRequired,
+	      inputType: _propTypes2['default'].string.isRequired,
 	
-	      checked: _react2['default'].PropTypes.bool,
-	      defaultChecked: _react2['default'].PropTypes.bool,
+	      checked: _propTypes2['default'].bool,
+	      defaultChecked: _propTypes2['default'].bool,
 	
-	      label: _react2['default'].PropTypes.node,
+	      label: _propTypes2['default'].node,
 	
-	      disabled: _react2['default'].PropTypes.bool,
+	      disabled: _propTypes2['default'].bool,
 	
-	      indeterminate: _react2['default'].PropTypes.bool,
+	      indeterminate: _propTypes2['default'].bool,
 	
-	      onChange: _react2['default'].PropTypes.func,
-	      onBlur: _react2['default'].PropTypes.func,
-	      onFocus: _react2['default'].PropTypes.func,
+	      onChange: _propTypes2['default'].func,
+	      onBlur: _propTypes2['default'].func,
+	      onFocus: _propTypes2['default'].func,
 	
 	      // base class added to customized checkboxes
-	      checkboxClass: _react2['default'].PropTypes.string,
+	      checkboxClass: _propTypes2['default'].string,
 	
 	      // base class added to customized radio buttons
-	      radioClass: _react2['default'].PropTypes.string,
+	      radioClass: _propTypes2['default'].string,
 	
 	      // class added on checked state (input.checked = true)
-	      checkedClass: _react2['default'].PropTypes.string,
+	      checkedClass: _propTypes2['default'].string,
 	
 	      // if not empty, used instead of 'checkedClass' option (input type specific)
-	      checkedCheckboxClass: _react2['default'].PropTypes.string,
-	      checkedRadioClass: _react2['default'].PropTypes.string,
+	      checkedCheckboxClass: _propTypes2['default'].string,
+	      checkedRadioClass: _propTypes2['default'].string,
 	
 	      // if not empty, added as class name on unchecked state (input.checked = false)
-	      uncheckedClass: _react2['default'].PropTypes.string,
+	      uncheckedClass: _propTypes2['default'].string,
 	
 	      // if not empty, used instead of 'uncheckedClass' option (input type specific)
-	      uncheckedCheckboxClass: _react2['default'].PropTypes.string,
-	      uncheckedRadioClass: _react2['default'].PropTypes.string,
+	      uncheckedCheckboxClass: _propTypes2['default'].string,
+	      uncheckedRadioClass: _propTypes2['default'].string,
 	
 	      // class added on disabled state (input.disabled = true)
-	      disabledClass: _react2['default'].PropTypes.string,
+	      disabledClass: _propTypes2['default'].string,
 	
 	      // if not empty, used instead of 'disabledClass' option (input type specific)
-	      disabledCheckboxClass: _react2['default'].PropTypes.string,
-	      disabledRadioClass: _react2['default'].PropTypes.string,
+	      disabledCheckboxClass: _propTypes2['default'].string,
+	      disabledRadioClass: _propTypes2['default'].string,
 	
 	      // if not empty, added as class name on enabled state (input.disabled = false)
-	      enabledClass: _react2['default'].PropTypes.string,
+	      enabledClass: _propTypes2['default'].string,
 	
 	      // if not empty, used instead of 'enabledClass' option (input type specific)
-	      enabledCheckboxClass: _react2['default'].PropTypes.string,
-	      enabledRadioClass: _react2['default'].PropTypes.string,
+	      enabledCheckboxClass: _propTypes2['default'].string,
+	      enabledRadioClass: _propTypes2['default'].string,
 	
 	      // class added on indeterminate state (input.indeterminate = true)
-	      indeterminateClass: _react2['default'].PropTypes.string,
+	      indeterminateClass: _propTypes2['default'].string,
 	
 	      // if not empty, used instead of 'indeterminateClass' option (input type specific)
-	      indeterminateCheckboxClass: _react2['default'].PropTypes.string,
-	      indeterminateRadioClass: _react2['default'].PropTypes.string,
+	      indeterminateCheckboxClass: _propTypes2['default'].string,
+	      indeterminateRadioClass: _propTypes2['default'].string,
 	
 	      // if not empty, added as class name on determinate state (input.indeterminate = false)
-	      determinateClass: _react2['default'].PropTypes.string,
+	      determinateClass: _propTypes2['default'].string,
 	
 	      // if not empty, used instead of 'determinateClass' option (input type specific)
-	      determinateCheckboxClass: _react2['default'].PropTypes.string,
-	      determinateRadioClass: _react2['default'].PropTypes.string,
+	      determinateCheckboxClass: _propTypes2['default'].string,
+	      determinateRadioClass: _propTypes2['default'].string,
 	
 	      // class added on hover state (pointer is moved onto input)
-	      hoverClass: _react2['default'].PropTypes.string,
+	      hoverClass: _propTypes2['default'].string,
 	
 	      // class added on focus state (input has gained focus)
-	      focusClass: _react2['default'].PropTypes.string,
+	      focusClass: _propTypes2['default'].string,
 	
 	      // class added on active state (mouse button is pressed on input)
-	      activeClass: _react2['default'].PropTypes.string,
+	      activeClass: _propTypes2['default'].string,
 	
 	      // adds hoverClass to customized input on label hover and labelHoverClass to label on input hover
-	      labelHover: _react2['default'].PropTypes.bool,
+	      labelHover: _propTypes2['default'].bool,
 	
 	      // class added to label if labelHover set to true
-	      labelHoverClass: _react2['default'].PropTypes.string,
+	      labelHoverClass: _propTypes2['default'].string,
 	
 	      // increase clickable area by given % (negative number to decrease)
-	      increaseArea: _react2['default'].PropTypes.string,
+	      increaseArea: _propTypes2['default'].string,
 	
 	      // true to set 'pointer' CSS cursor over enabled inputs and 'default' over disabled
-	      cursor: _react2['default'].PropTypes.bool,
+	      cursor: _propTypes2['default'].bool,
 	
 	      // set true to inherit original input's class name
-	      inheritClass: _react2['default'].PropTypes.bool,
+	      inheritClass: _propTypes2['default'].bool,
 	
 	      // if set to true, input's id is prefixed with 'iCheck-' and attached
-	      inheritID: _react2['default'].PropTypes.bool,
+	      inheritID: _propTypes2['default'].bool,
 	
 	      // set true to activate ARIA support
-	      aria: _react2['default'].PropTypes.bool,
+	      aria: _propTypes2['default'].bool,
 	
 	      // add HTML code or text inside customized input
-	      insert: _react2['default'].PropTypes.node,
+	      insert: _propTypes2['default'].node,
 	
-	      children: _react2['default'].PropTypes.node
+	      children: _propTypes2['default'].node,
+	
+	      // class added for outer label
+	      labelClassName: _propTypes2['default'].string
 	    },
 	    enumerable: true
 	  }, {
@@ -1064,8 +1071,26 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var onTouchStart = props.onTouchStart;
 	      var onTouchEnd = props.onTouchEnd;
 	      var className = props.className;
+	      var checkboxClass = props.checkboxClass;
+	      var increaseArea = props.increaseArea;
+	      var inputType = props.inputType;
+	      var radioClass = props.radioClass;
+	      var checkedClass = props.checkedClass;
+	      var disabledClass = props.disabledClass;
+	      var indeterminate = props.indeterminate;
+	      var indeterminateClass = props.indeterminateClass;
+	      var hoverClass = props.hoverClass;
+	      var focusClass = props.focusClass;
+	      var activeClass = props.activeClass;
+	      var labelHover = props.labelHover;
+	      var labelHoverClass = props.labelHoverClass;
+	      var labelClassName = props.labelClassName;
+	      var inheritClass = props.inheritClass;
+	      var inheritID = props.inheritID;
+	      var aria = props.aria;
+	      var insert = props.insert;
 	
-	      var other = _objectWithoutProperties(props, ['type', 'name', 'value', 'label', 'onBlur', 'onFocus', 'onMouseUp', 'onMouseDown', 'onMouseLeave', 'onTouchStart', 'onTouchEnd', 'className']);
+	      var other = _objectWithoutProperties(props, ['type', 'name', 'value', 'label', 'onBlur', 'onFocus', 'onMouseUp', 'onMouseDown', 'onMouseLeave', 'onTouchStart', 'onTouchEnd', 'className', 'checkboxClass', 'increaseArea', 'inputType', 'radioClass', 'checkedClass', 'disabledClass', 'indeterminate', 'indeterminateClass', 'hoverClass', 'focusClass', 'activeClass', 'labelHover', 'labelHoverClass', 'labelClassName', 'inheritClass', 'inheritID', 'aria', 'insert']);
 	
 	      var checked = this.state.checked;
 	
@@ -1114,13 +1139,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	      }
 	
 	      // Check ARIA option
-	      var aria = !!props.aria;
+	      aria = !!props.aria;
 	
 	      // TODO: Set ARIA placeholder
 	      // let ariaID = _iCheck + '-' + Math.random().toString(36).substr(2, 6);
 	
 	      var helper = undefined;
-	      var indeterminateClass = props.indeterminateClass;
 	      if (props.inputType === 'checkbox' && typeof props.indeterminateCheckboxClass !== 'undefined') {
 	        indeterminateClass = props.indeterminateCheckboxClass;
 	      } else if (props.inputType === 'radio' && typeof props.indeterminateRadioClass !== 'undefined') {
@@ -1128,14 +1152,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	      }
 	
 	      var wrapProps = {
-	        className: (0, _classnames3['default'])((_classnames = {}, _defineProperty(_classnames, props.checkboxClass, props.inputType === 'checkbox'), _defineProperty(_classnames, props.radioClass, props.inputType === 'radio'), _defineProperty(_classnames, indeterminateClass, props.indeterminate), _defineProperty(_classnames, props.checkedClass, checked), _defineProperty(_classnames, props.disabledClass, disabled), _defineProperty(_classnames, props.hoverClass, this.state.hovered), _defineProperty(_classnames, props.focusClass, this.state.focused), _defineProperty(_classnames, props.activeClass, this.state.active), _classnames))
+	        className: (0, _classnames3['default'])((_classnames = {}, _defineProperty(_classnames, props.checkboxClass, props.inputType === 'checkbox'), _defineProperty(_classnames, props.radioClass, props.inputType === 'radio'), _defineProperty(_classnames, indeterminateClass, indeterminate), _defineProperty(_classnames, props.checkedClass, checked), _defineProperty(_classnames, props.disabledClass, disabled), _defineProperty(_classnames, props.hoverClass, this.state.hovered), _defineProperty(_classnames, props.focusClass, this.state.focused), _defineProperty(_classnames, props.activeClass, this.state.active), _classnames))
 	      };
-	
-	      if (aria) {
-	        wrapProps.role = props.inputType;
-	        // Set ARIA "labelledby"
-	        wrapProps['aria-labelledby'] = '';
-	      }
 	
 	      if (props.inheritClass) {
 	        wrapProps.className = (0, _classnames3['default'])(wrapProps.className, props.className);
@@ -1145,16 +1163,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	        wrapProps.id = _iCheck + '-' + id;
 	      }
 	
-	      var helperProps = {
+	      if (aria) {
+	        wrapProps.role = props.inputType;
+	        // Set ARIA "labelledby"
+	        wrapProps['aria-labelledby'] = wrapProps.id;
+	        wrapProps['aria-checked'] = checked;
+	      }
+	
+	      // Layer addition
+	      helper = _react2['default'].createElement('ins', {
 	        className: _iCheckHelper,
 	        style: layer,
 	        onClick: this.handleHelperClick.bind(this)
-	      };
+	      });
 	
-	      // Layer addition
-	      helper = _react2['default'].createElement('ins', helperProps);
+	      var inputElement = _react2['default'].createElement('input', _extends({}, other, {
 	
-	      var inputProps = {
 	        ref: 'checkbox',
 	        type: props.inputType,
 	        style: hide,
@@ -1164,11 +1188,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	        onChange: this.handleChange.bind(this),
 	        onBlur: this.handleBlur.bind(this),
 	        onFocus: this.handleFocus.bind(this)
-	      };
+	      }));
 	
-	      var inputElement = _react2['default'].createElement('input', inputProps);
-	
-	      var insertElement = props.insert || undefined;
+	      var insertElement = props.insert;
 	      if (insertElement && !_react2['default'].isValidElement(insertElement)) {
 	        insertElement = _react2['default'].createElement('div', { dangerouslySetInnerHTML: { __html: insertElement } });
 	      }
@@ -1225,6 +1247,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	        onTouchStart: handleLabelEvent.bind(this),
 	        onTouchEnd: handleLabelEvent.bind(this)
 	      };
+	
+	      // add className prop for outer label
+	      if (labelClassName) {
+	        labelProps.className = labelClassName;
+	      }
 	
 	      return _react2['default'].createElement(
 	        'label',
@@ -1294,6 +1321,12 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 43 */
+/***/ function(module, exports) {
+
+	module.exports = __WEBPACK_EXTERNAL_MODULE_43__;
+
+/***/ },
+/* 44 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1366,7 +1399,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 44 */
+/* 45 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1393,7 +1426,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _Radio = __webpack_require__(43);
+	var _propTypes = __webpack_require__(42);
+	
+	var _propTypes2 = _interopRequireDefault(_propTypes);
+	
+	var _Radio = __webpack_require__(44);
 	
 	var _Radio2 = _interopRequireDefault(_Radio);
 	
@@ -1406,7 +1443,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      /**
 	       * The name that will be applied to all radio buttons inside it.
 	       */
-	      name: _react2['default'].PropTypes.string.isRequired,
+	      name: _propTypes2['default'].string.isRequired,
 	
 	      /**
 	       * Sets the default radio button to be the one whose
@@ -1414,29 +1451,29 @@ return /******/ (function(modules) { // webpackBootstrap
 	       * This will override any individual radio button with
 	       * the defaultChecked or checked property stated.
 	       */
-	      defaultValue: _react2['default'].PropTypes.string,
+	      defaultValue: _propTypes2['default'].string,
 	
 	      /**
 	       * The value of the currently selected radio button.
 	       */
-	      value: _react2['default'].PropTypes.string,
+	      value: _propTypes2['default'].string,
 	
 	      /**
 	       * Callback function that is fired when a radio button has
 	       * been clicked. Returns the event and the value of the radio
 	       * button that has been selected.
 	       */
-	      onChange: _react2['default'].PropTypes.func,
+	      onChange: _propTypes2['default'].func,
 	
 	      /**
 	       * Should be used to pass `Radio` components.
 	       */
-	      children: _react2['default'].PropTypes.node,
+	      children: _propTypes2['default'].node,
 	
 	      /**
 	       * The css class name of the root element.
 	       */
-	      className: _react2['default'].PropTypes.string
+	      className: _propTypes2['default'].string
 	    },
 	    enumerable: true
 	  }]);
