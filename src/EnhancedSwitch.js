@@ -145,7 +145,7 @@ class EnhancedSwitch extends React.Component {
     increaseArea: '',
 
     // true to set 'pointer' CSS cursor over enabled inputs and 'default' over disabled
-    cursor: false,
+    cursor: '',
 
     // set true to inherit original input's class name
     inheritClass: false,
